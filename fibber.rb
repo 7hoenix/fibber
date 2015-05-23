@@ -68,6 +68,3 @@ class Fibber
     end
   end
 end
-
-fibber = Fibber.new
-fibber.input
