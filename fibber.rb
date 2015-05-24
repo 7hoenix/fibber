@@ -19,7 +19,11 @@ class Fibber
   end
 
   def calculate(number_requested)
-    return nil if number_requested == 0
+    # if we return an empty array it makes more sense
+    # because the return types are all in the same co-domain
+    # (they are all lists of ints)
+    # and we don't have to deal with the odd early return
+    # (but this could not be a programming interface you control)
     pattern = []
     number_requested.times do |num|
       if num == 0
@@ -68,6 +72,3 @@ class Fibber
     end
   end
 end
-
-fibber = Fibber.new
-fibber.input
