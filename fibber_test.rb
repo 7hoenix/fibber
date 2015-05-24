@@ -29,7 +29,9 @@ class FibberText < Minitest::Test
       fibber = Fibber.new
       number_requested = 0
       calculations = fibber.calculate(number_requested)
-      assert_equal nil, calculations
+      # probably makes sense to return an empty array
+      # instead of a nil if the other returns are arrays
+      assert_equal [], calculations
   end
 
   def test_calculate_returns_zero_when_requested_is_one
